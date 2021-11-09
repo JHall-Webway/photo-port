@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
+import ContactForm from './components/Contact';
 
 export default function App() {
   const [categories] = useState([
@@ -26,14 +27,11 @@ export default function App() {
       categories={categories}
       setCurrentCategory={setCurrentCategory}
       currentCategory={currentCategory}
-      ></Nav>
+      />
       <main>
-        <div>
-          <Gallery
-          currentCategory={currentCategory}
-          />
-          <About></About>
-        </div>
+          <ContactForm />
+          <Gallery currentCategory={currentCategory} />
+          <About />
       </main>
     </div>
   );
