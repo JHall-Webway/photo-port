@@ -29,7 +29,9 @@ export default function App() {
       ></Nav>
       <main>
         <div>
-          <Gallery></Gallery>
+          <Gallery
+          currentCategory={currentCategory}
+          />
           <About></About>
         </div>
       </main>
