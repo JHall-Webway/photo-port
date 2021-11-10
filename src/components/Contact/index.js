@@ -35,7 +35,7 @@ export default function ContactForm() {
 
     return (
         <section>
-            <h1>Contact me</h1>
+            <h1 data-testid="link">Contact me</h1>
             <form id="contact-form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
@@ -54,7 +54,7 @@ export default function ContactForm() {
                         <p>{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button data-testid="submit" type="submit">Submit</button>
             </form>
         </section>
     );

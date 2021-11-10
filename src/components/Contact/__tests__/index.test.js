@@ -12,5 +12,12 @@ describe('Contact form is rendering', () => {
         const { asFragment } = render(<ContactForm />);
         expect(asFragment()).toMatchSnapshot();
     });
-    
+    it('matches header', () => {
+        const { getByTestId } = render(<ContactForm />);
+        expect(getByTestId('link')).toHaveTextContent('Contact me');
+    });
+    it('matches button text', () => {
+        const { getByTestId } = render(<ContactForm />);
+        expect(getByTestId('submit')).toHaveTextContent('Submit');
+    });
 });
