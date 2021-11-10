@@ -1,4 +1,4 @@
-export default function Modal({ currentPhoto, setIsModalOpen }) {
+export default function Modal({ currentPhoto, onClose }) {
     const { name, category, description, index } = currentPhoto;
     return (
         <div className="modalBackdrop">
@@ -11,7 +11,7 @@ export default function Modal({ currentPhoto, setIsModalOpen }) {
                 <p>{description}</p>
                 <button
                 type="button"
-                onClick={() => setIsModalOpen(false)}
+                onClick={onClose}
                 >
                     Close
                 </button>
