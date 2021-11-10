@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
+
+import './App.css';
+
+import { useState } from 'react'
 
 export default function App() {
   const [categories] = useState([
